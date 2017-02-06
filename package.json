@@ -1,6 +1,8 @@
 {
   "name": "JS101",
   "version": "0.0.0",
+  "repository": "git@github.com:magentanova/js101.git",
+  "license": "MIT",
   "description": "exercises in javascript functions, logical operators, and control flow",
   "dependencies": {
     "chai": "^3.5.0",
