@@ -35,8 +35,18 @@ describe('Function', function() {
 			assert.equal(19, sum(8, 11))
 			assert.equal(104, sum(4, 100))
 			assert.equal(6176, sum(867, 5309))
+		})
+	})
+	describe('#sum()', function(){
+		it('should return null if either input is not a number', function(){
+			checkFuncBasics('sum',2)
 			assert.equal(null, sum('867', 5309))
 			assert.equal(null, sum(true, 5))
+		})
+	})
+	describe('#sum()', function(){
+		it('should return null if either input is negative', function(){
+			checkFuncBasics('sum',2)
 			assert.equal(null, sum(5,-5))
 		})
 	})

@@ -28,6 +28,10 @@ var doubleNum = function(num) {
  * inputs and computes the sum of those two numbers.
  */
 
+ // PART 2.5
+
+// modify your sum() function so that it will return null
+// if either of the inputs is not a number.
 
 // PART 3
 
