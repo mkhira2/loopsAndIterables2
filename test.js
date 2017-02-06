@@ -1,26 +1,28 @@
+console.log('********************************************************************************************************************************************')
+console.log('')
+console.log('Test Results Below')
+console.log('__________________')
+
 var chai = require('chai'),
 	expect = chai.expect
 	should = chai.should
 	assert = chai.assert
+
+var NUMBER,
+	ORACLE
+
 
 function checkFuncBasics(name,argNum) {
 	try {
 		var func = eval(name)
 	}
 	catch(e) {
-		console.log(e)
 		assert.equal(undefined,name,'Make sure your function is called ' + name + ', case-sensitive.')
 	}
 	if (argNum) assert.equal(func.length,argNum,'Your function should take ' + argNum + ' argument(s) (that means inputs). Does it?')
 }
 
 describe('Function', function() {
-	describe('#addOne()', function(){
-		it('should return input + 1', function(){
-			checkFuncBasics('addOne',1)
-			expect(addOne(1)).to.equal(2)
-		})
-	})
 	describe('#doubleNum()', function(){
 		it('should return a doubled input', function(){
 			checkFuncBasics('doubleNum',1)
@@ -54,7 +56,7 @@ describe('Function', function() {
 		})
 	})
 	describe('#minimum', function(){
-		it('find the minimum of four input numbers', function(){
+		it('should find the minimum of four input numbers', function(){
 			checkFuncBasics('minimum',4)
 			assert.equal(0, minimum(1,2,4,0))
 			assert.equal(-99, minimum(1000,-2,-99,50))
@@ -63,7 +65,7 @@ describe('Function', function() {
 		})
 	})
 	describe('#justOneString', function(){
-		it('return true if one input is a string', function(){
+		it('should return true if one input is a string', function(){
 			checkFuncBasics('justOneString',2)
 			assert.equal(true, justOneString('a',5))
 			assert.equal(true, justOneString(6,'dotron'))
@@ -72,41 +74,48 @@ describe('Function', function() {
 		})
 	})
 	describe('#doTwice', function(){
-		it('takes a function as input and invokes the function twice', function(){
+		it('should take a function as input and invokes the function twice', function(){
 			checkFuncBasics('doTwice',1)
-			assert.equal(NUMBER,12)
+			NUMBER = 12
 			doTwice(function(){NUMBER += 1})
 			assert.equal(NUMBER,14)
 		})
 	})
 	describe('#conditionallyInvoke', function(){
-		it('invokes the input function if a global variable called ORACLE stores the string "YES"', function(){
+		it('should invoke the input function if a global variable called ORACLE stores the string "YES"', function(){
 			checkFuncBasics('conditionallyInvoke',1)
+			NUMBER = 10
+			ORACLE = 'NO'
 			conditionallyInvoke(function(){NUMBER += 1})
-			assert.equal(NUMBER,14)
+			assert.equal(NUMBER,10)
 			ORACLE = 'YES'
 			conditionallyInvoke(function(){NUMBER += 1})
-			assert.equal(NUMBER,15)
+			assert.equal(NUMBER,11)
 
 		})
 	})
 	describe('#factory', function(){
-		it('should work', function(){
+		it('should work as described below', function(){
 			checkFuncBasics('factory')
-			assert.equal('hello world', factory()())
+			var str = 'factory()() should equal the string "hello world"'
+			assert.typeOf(factory2(),'function',str)
+			assert.equal('hello world', factory()(), str)
 		})
 	})
 	describe('#factory2', function(){
-		it('should work, too', function(){
-			assert.equal('you sly dog', factory2()('you sly dog'))
+		it('should work as described below', function(){
+			var str = 'factory2()("you sly dog") should equal the string "you sly dog"'
+			assert.typeOf(factory2(),'function',str)
+			assert.equal('you sly dog', factory2()('you sly dog'), str)
 			assert.equal(999, factory2()(999))
 		})
 	})
 	describe('#factory3', function(){
-		it('ok, this one also should work', function(){
-			assert.equal('i have reached function nirvana', factory3('i have reached function nirvana')())
+		it('should work as described below', function(){
+			var str = 'factory3("i have reached function nirvana")() should equal the string "i have reached function nirvana"'
+			assert.typeOf(factory3(),'function',str)
+			assert.equal('i have reached function nirvana', factory3('i have reached function nirvana')(), str)
 			assert.equal(100, factory3(100)())
 		})
 	})
-
 })
