@@ -1,0 +1,1 @@
+cat worksheet.js > tmp.js && cat test.js >> tmp.js && mocha tmp.js && rm tmp.js
