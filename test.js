@@ -65,7 +65,7 @@ describe('Function', function() {
 		})
 	})
 	describe('#justOneString', function(){
-		it('should return true if one input is a string', function(){
+		it('should return true if exactly one input is a string', function(){
 			checkFuncBasics('justOneString',2)
 			assert.equal(true, justOneString('a',5))
 			assert.equal(true, justOneString(6,'dotron'))
