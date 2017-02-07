@@ -1,7 +1,7 @@
 {
-  "name": "loopsAndIterables",
+  "name": "loopsAndIterables2",
   "version": "0.0.0",
-  "repository": "git@github.com:magentanova/loopsAndIterables.git",
+  "repository": "git@github.com:magentanova/loopsAndIterables2.git",
   "license": "MIT",
   "description": "exercises in javascript functions, logical operators, and control flow",
   "dependencies": {
