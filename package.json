@@ -1,7 +1,7 @@
 {
-  "name": "JS101",
+  "name": "loopsAndIterables",
   "version": "0.0.0",
-  "repository": "git@github.com:magentanova/js101.git",
+  "repository": "git@github.com:magentanova/loopsAndIterables.git",
   "license": "MIT",
   "description": "exercises in javascript functions, logical operators, and control flow",
   "dependencies": {

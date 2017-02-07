@@ -1,135 +1,56 @@
+/**
+ * PART 0
+ *
+ * Write a function that calculates the sum of all the numbers in an array
+ */
 
-// Example
+// PART 1
 
-// The purpose of this first exercise is just to show how 
-// assertions work and how the homework should be carried out. 
-// We'll do it together in class.
+// Write a function maxOfArray() that takes an array of
+// numbers as an argument and finds the highest number.
 
-// Part EXAMPLE
-
-// Write a function called addOne() that returns the input number, plus one. 
-
-var addOne = function(num) {
-	return num + 1
-}
-
-// Part 1
-
-// Fix the following code so doubleNum(2) wil equal 4. 
-
-var doubleNum = function(num) {
-	num * 2
-}
 
 /**
  * PART 2
  *
- * Write a function called sum that takes two numbers as
- * inputs and computes the sum of those two numbers.
+ * Write a function isVowel() that takes a character (i.e. a string of length 1)
+ * and returns true if it is a vowel, false otherwise.
  */
 
- // PART 2.5
-
-// modify your sum() function so that it will return null
-// if either of the inputs is not a number.
-
-// PART 3
-
-// Write a function called average that takes two numbers
-// as inputs and returns the average of the two. To avoid
-// repeating yourself, use your sum function inside 
-// of your average function.
+/**
+ * Part 3
+ *
+ * Define a function reverse() that computes
+ * the reversal of a string. For example,
+ * reverse("skoob") should return the
+ * string "books".
+ */
 
 
-// Part 4
-
-// Write a function called isNegative that will tell 
-// whether a number is negative or not.
-
-
-// Now, modify your sum function again, so that it 
-// will return null if any of the inputs is negative.
-// To avoid repeating yourself, use your isNegative 
-// function inside your sum funciton ***
-
-
-// Part 5
-
-// Write a function that will find the minimum of four 
-// input numbers. You can do it using nested if statements,
-// boolean operators, or both (but not neither).
+/**
+ * Part 4
+ *
+ * write a function the returns a FizzBuzz string for some number N (counting up from 1).
+ * - for every number that isn't a multiple of 3 or 5, return a period "."
+ * - for every number that is a multiple of 3 (but not 5), return "fizz"
+ * - for every number that is a multiple of 5 (but not 3), return "buzz"
+ * - for every number that is a multiple of 3 and 5, return "fizzbuzz"
+ */
 
 
-// Part 6
-
-// Using logical operators, write a function that will
-// return true if either input is a string, but not 
-// both or neither. 
-
-
-// HARD MODE
-
-// Part 7
-
-// Write a function called doTwice that takes as input a 
-// function and invokes that function twice. 
-
-// For testing purposes, I've included some functions that
-// modify global variables, although that's not a good
-// pattern for production code.
-
-var doTwice = function() {
-
-}
-
-var helloWorld = function() {
-	console.log('hello world')
-}
+/**
+ * Part 5
+ *
+ * Write a function findLongestWord() that takes a string of 
+ words and returns the longest word.
+ * i.e. findLongestWord("a book full of dogs") should return "book"
+ */
 
 
-doTwice(helloWorld) // should print 'hello world' to the console twice. 
-
-
-// Part 8
-
-// Write a function called conditionallyInvoke that takes a function
-// as input. It should invoke that input function only if 
-// the value of a certain global variable, called ORACLE, is 
-// "YES." Otherwise, it will does nothing.
-
-var conditionallyInvoke = function() {
-
-}
-
-var ORACLE = 'NO'
-
-conditionallyInvoke(helloWorld) // should do nothing
-
-var ORACLE = 'YES'
-
-conditionallyInvoke(helloWorld) // should print hello world
-
-
-// EPIC MODE
-
-// For parts 9 through 11, your only instructions are to make the tests pass.
-
-// Part 9
-
-var factory = function() {
-
-}
-
-
-// Part 10
-
-var factory2 = function() {
-	// you want more?
-}
-	
-// Part 11
-
-var factory3 = function(stuff) {
-	// This can't be healthy...	
-}
+/**
+ * PART 6
+ *
+ * write a function that returns the Greatest Common Denominator of two numbers
+ * - if no GCD exists, return 1
+ */
 
