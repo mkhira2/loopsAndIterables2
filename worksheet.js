@@ -17,6 +17,7 @@
  * and returns true if it is a vowel, false otherwise.
  */
 
+
 /**
  * Part 3
  *
@@ -30,11 +31,15 @@
 /**
  * Part 4
  *
- * write a function the returns a FizzBuzz string for some number N (counting up from 1).
- * - for every number that isn't a multiple of 3 or 5, return a period "."
- * - for every number that is a multiple of 3 (but not 5), return "fizz"
- * - for every number that is a multiple of 5 (but not 3), return "buzz"
- * - for every number that is a multiple of 3 and 5, return "fizzbuzz"
+ * write a function the returns a fizzbuzz string for an input number. 
+ A fizzbuzz string is defined as the following:
+ For every number from 1 to the input number...
+ * - if that number isn't a multiple of 3 or 5, add a period "." to the fizzbuzz string
+ * - for every number that is a multiple of 3 (but not 5), add "fizz" to the fizzbuzz string
+ * - for every number that is a multiple of 5 (but not 3), add "buzz" to the fizzbuzz string
+ * - for every number that is a multiple of 3 and 5, add "fizzbuzz" to the fizzbuzz string
+ For example, the fizzbuzz string for the number 3 is "..fizz"
+ For the number 15, the fizzbuzz string is "..fizz.buzzfizz..fizzbuzz.fizz..fizzbuzz"
  */
 
 
