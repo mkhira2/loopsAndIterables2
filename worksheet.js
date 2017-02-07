@@ -7,14 +7,14 @@
 // PART 1
 
 // Write a function maxOfArray() that takes an array of
-// numbers as an argument and finds the highest number.
+// numbers as an argument and returns the highest number in the array.
 
 
 /**
  * PART 2
  *
  * Write a function isVowel() that takes a character (i.e. a string of length 1)
- * and returns true if it is a vowel, false otherwise.
+ * as input and returns true if it is a vowel, false otherwise.
  */
 
 
