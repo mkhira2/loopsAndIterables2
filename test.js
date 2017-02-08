@@ -55,14 +55,14 @@ describe('properSentences()', function(){
 		checkFuncBasics('properSentences',1)
 		var testParagraph = 'it was a fine morning. the wine was good. light slanted in through the cafe window.'
 		var properParagraph = 'It was a fine morning. The wine was good. Light slanted in through the cafe window.'
-		expect(properSentences(testParagraph).to.equal(properParagraph))		
+		expect(properSentences(testParagraph)).to.equal(properParagraph)		
 	})
 })
 describe('iPutTheFunIn()', function(){
 	it('should return a copy of the first string, with the word "fun" inserted into the middle.', function(){
 		checkFuncBasics('iPutTheFunIn',1)
-		expect(iPutTheFunIn('funeral')).to.equal('funefunrary')
-		expect(iPutTheFunIn('red')).to.equal('refund')
+		expect(iPutTheFunIn('funerary')).to.equal('funefunrary')
+		expect(iPutTheFunIn('reds')).to.equal('refunds')
 	})
 })
 describe('split()', function(){
@@ -73,7 +73,7 @@ describe('split()', function(){
 	it('should contain elements from the input string, separated by the input delimiter', function() {
 		var fruits = "pear,apple,plum",
 			fruitsArr = split(fruits,',')
-		expect(fruitsArr[1]).to.equal('apple')
+		expect(fruitsArr[1]).to.equal('pear,apple')
 		expect(split('a b c',' ')[0]).to.equal('a')
 	})
 })
