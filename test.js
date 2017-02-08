@@ -73,7 +73,7 @@ describe('split()', function(){
 	it('should contain elements from the input string, separated by the input delimiter', function() {
 		var fruits = "pear,apple,plum",
 			fruitsArr = split(fruits,',')
-		expect(fruitsArr[1]).to.equal('pear,apple')
+		expect(fruitsArr[1]).to.equal('apple')
 		expect(split('a b c',' ')[0]).to.equal('a')
 	})
 })
@@ -103,6 +103,7 @@ describe('pipeline()', function() {
 			for (var i = 0; i < arr.length; i ++) {
 				newArr.push(arr[i] + '!')
 			}
+			return newArr
 		}
 
 		var result = pipeline([10,20,30],squareDance,exclaimAll)
