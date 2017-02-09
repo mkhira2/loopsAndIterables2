@@ -73,9 +73,30 @@ var iPutTheFunIn = function(string) {
 
 // // obviously, you may not use the native .split() method. your task here is to reverse-engineer .split() and write your own. 
 
+var split = function(string, delimiter) {
+ var tempString = ''
+ var splitArray = []
+ 	for (var i = 0; i < string.length; i++) {
+        
+        if (string[i] !== delimiter) {
+            tempString += string[i]
+        }
+        else {
+        splitArray.push(tempString)
+        tempString = ''
+        }
+    }
+    return splitArray
+}
 
 // // PART 6: write a function called pipeline(). it should take three inputs: (1) a starting value, (2) a function, and (3) another function. it should use functions (2) and (3) on the starting value, one after the other, and return a new value that has been processed by both function (2) and function (3).
 
+
+var pipeline = function(num, func1, func2) {
+ 	   var questionThree = func1(num) //3?
+       var questionBangThree = func2(questionThree)
+       return questionBangThree
+}
 // // visit test.js to see the tests that will be run against your code.
 
 
