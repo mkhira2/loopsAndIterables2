@@ -37,8 +37,7 @@ var capitalizeAll = function(sentence) {
     var newSentence = sentence.split(' ')
     var newArray = []
     for (var i = 0; i < newSentence.length; i++) {
-        	var words = newSentence[i]
-    	    newArray.push(capitalize(words))
+    	    newArray.push(capitalize(newSentence[i]))
     }
      return newArray.join(' ')
 }
@@ -52,12 +51,9 @@ var properSentences = function(sentence) {
     var newSentence = sentence.split('. ')
     var newArray = []
     for (var i = 0; i < newSentence.length; i++) {
-        	var words = newSentence[i]
-            words += '.'
-    	    newArray.push(capitalize(words))
+        newArray.push(capitalize(newSentence[i]))
     }
-    var properSentence = newArray.join(' ') 
-    return properSentence.slice(0, -1)
+        return newArray.join('. ')
 }
 
 // // PART 4: write a function called iPutTheFunIn(). It should take a string as input. The output should be a copy of the original string with the word 'fun' inserted into the center of the string. 
