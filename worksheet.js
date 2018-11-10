@@ -119,12 +119,33 @@ var split = function(string, delimiter) {
     return splitArray
 }
 
+var split = (string, delimiter) => {
+    var tempString = ''
+    var splitArray = []
+    for (var i = 0; i < string.length; i++) {
+        if (string[i] !== delimiter) {
+            tempString += string[i]
+        } else {
+            splitArray.push(tempString)
+            tempString = ''
+        }
+    }
+    splitArray.push(tempString)
+    return splitArray
+}
+
 // // PART 6: write a function called pipeline(). it should take three inputs: (1) a starting value, (2) a function, and (3) another function. it should use functions (2) and (3) on the starting value, one after the other, and return a new value that has been processed by both function (2) and function (3).
 
 
 var pipeline = function(input, func1, func2) {
-        var varOne = func1(input)
-        var varTwo = func2(varOne)
-        return varTwo
-    }
+    var varOne = func1(input)
+    var varTwo = func2(varOne)
+    return varTwo
+}
+
+var newPipeline = (input, func1, func2) => {
+    var varOne = func1(input)
+    var varTwo = func2(varOne)
+    return varTwo
+}
     // // visit test.js to see the tests that will be run against your code.
