@@ -8,9 +8,15 @@ var squareDance = function(inputArray) {
     return squaredArray
 }
 
+var newSquareDance = inputArray => {
+    return inputArray.map((x) => {
+        return Math.pow(x, 2)
+    })
+}
 
-// PART 1: write a function called nicer(). 
-// It should clean up the language in its input sentence. 
+
+// PART 1: write a function called nicer().
+// It should clean up the language in its input sentence.
 // Forbidden words include heck, dang, crappy, and dang.
 
 var nicer = function(sentence) {
@@ -24,13 +30,22 @@ var nicer = function(sentence) {
     return cleanSentence.trim()
 }
 
-// // PART 2: write a function called capitalizeAll(). 
+var newNicer = sentence => {
+    sentence = sentence.replace(/heck|darn|crappy|dang/gi, '')
+    return sentence
+}
+
+// // PART 2: write a function called capitalizeAll().
 // It should take as input a sentence and capitalize the first letter
-// of every word in the sentence. 
+// of every word in the sentence.
 
 
 var capitalize = function(str) {
     return str.substring(0, 1).toUpperCase() + str.substring(1) //capitalize function created for use in next two problems
+}
+
+var newCapitalize = str => {
+    return str.substring(0, 1).toUpperCase() + str.substring(1)
 }
 
 var capitalizeAll = function(sentence) {
@@ -42,23 +57,43 @@ var capitalizeAll = function(sentence) {
     return newArray.join(' ')                                   // return capitalized array as string
 }
 
+var newCapitalizeAll = sentence => {
+    return sentence.replace(
+        /\w\S*/g,
+        text => {
+            return text.charAt(0).toUpperCase() + text.substr(1).toLowerCase();
+        }
+    );
+}
+
 
 // // PART 3: write a function called properSentences(). It should take as input a string and capitalize the first letter of every sentence in that string. (For our purposes, all sentences will end with periods. Write one that works with ? and ! and receive a gratifying high five, right on the hand!)
 
-
-
 var properSentences = function(sentence) {
     var newSentence = sentence.split('. ')                      // same as previous, only capitalizing
-    var newArray = []                                           // each word after a '.' instead of 
+    var newArray = []                                           // each word after a '.' instead of
     for (var i = 0; i < newSentence.length; i++) {              // after a ' '
         newArray.push(capitalize(newSentence[i]))
     }
     return newArray.join('. ')
 }
 
-// // PART 4: write a function called iPutTheFunIn(). It should take a string as input. The output should be a copy of the original string with the word 'fun' inserted into the center of the string. 
+var newProperSentences = sentence => {
+    return sentence.replace(
+        /.+?[\.\?\!](\s|$)/g,
+        text => {
+        return text.charAt(0).toUpperCase() + text.substr(1).toLowerCase();
+    });
+}
+
+// // PART 4: write a function called iPutTheFunIn(). It should take a string as input. The output should be a copy of the original string with the word 'fun' inserted into the center of the string.
 
 var iPutTheFunIn = function(string) {
+    var funWithStrings = (string.substring(0, string.length / 2)) + 'fun' + (string.substring(string.length / 2))
+    return funWithStrings
+}
+
+var newIPutTheFunIn = string => {
     var funWithStrings = (string.substring(0, string.length / 2)) + 'fun' + (string.substring(string.length / 2))
     return funWithStrings
 }
@@ -67,7 +102,7 @@ var iPutTheFunIn = function(string) {
 
 // // PART 5: write a function called split(). it should take two inputs: (1) a string and (2) a delimiter
 
-// // obviously, you may not use the native .split() method. your task here is to reverse-engineer .split() and write your own. 
+// // obviously, you may not use the native .split() method. your task here is to reverse-engineer .split() and write your own.
 
 var split = function(string, delimiter) {
     var tempString = ''                         // create empty string to hold characters that aren't delimiter
